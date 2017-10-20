@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue6</title>
+    <script type="text/javascript" src="vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="isShow">You can see me!</p>
+      <p v-else>Now you can see me!</p>
+      <template v-if="isShow">
+        <h4>Heading</h4>
+        <p>Inside a template</p>
+      </template>
+      <p>Do you also see me!</p>
+      <button type="button" name="button" @click="isShow = !isShow">Switch</button>
+    </div>
+  <script type="text/javascript">
+    new Vue({
+      el: "#app",
+      data: {
+        isShow: true
+      }
+    });
+  </script>
+  </body>
+</html>
